@@ -5,7 +5,7 @@ class WidgetHeader extends Component {
     render() {
         return (
             <div className="widHeader">
-                <div className="widHeaderText">I am bot</div>
+                <div className="widHeaderText">BoB</div>
             </div>
         )
     }

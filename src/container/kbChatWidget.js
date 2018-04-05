@@ -7,6 +7,13 @@ import './kbChatWidget.css';
 
 class KbChatWidget extends Component {
     
+    constructor(props) {
+        super(props);
+        this.state={
+            mock:[{type:"bot",message:"Hi"},{type:"user",message:"Hi bot"}]
+        }
+        this.setToState = this.setToState.bind(this);
+    }
     componentDidMount(){
         this.initBot();
     }
@@ -16,7 +23,7 @@ class KbChatWidget extends Component {
     }
 
     async sendRequestToBot(data) {
-        console.log("sendRequestToBot:", data);
+        //this.state.mock.push({type:"user",message:data});
         let context;
         const latestResponse = getResponsePayload();
         if (latestResponse) {
@@ -24,15 +31,27 @@ class KbChatWidget extends Component {
         }
         let resposne = await sendRequestToBotServer(data,context);
         console.log("resposne from BOT:",resposne);
+
+    }
+
+    setToState(data){
+        console.log("data reads",data)
+        var newMock=this.state.mock;
+        newMock.push({type:"user",message:data});
+        this.setState({
+            mock: newMock
+          });
+        this.sendRequestToBot(data);
     }
 
 
     render() {
+        
         return (
             <div className="kbbotContainer">
                 <WidgetHeader />
-                <ConversationWindow />
-                <UserInput userInputValue={this.sendRequestToBot} />
+                <ConversationWindow messages={this.state.mock} />
+                <UserInput  userInputValue={this.setToState} />
             </div>
         )
     }

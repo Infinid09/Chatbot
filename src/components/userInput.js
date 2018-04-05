@@ -13,7 +13,8 @@ class UserInput extends Component {
         if (event.key == 'Enter') {
             console.log('enter press here! ', event.target.value);
             this.props.userInputValue(event.target.value);
-        }
+            event.target.value="";
+        }        
     }
 
     render() {

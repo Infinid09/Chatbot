@@ -15,7 +15,7 @@ class App extends Component {
         <AppBar position="static">
         <Toolbar>
           <Typography variant="title" color="inherit" >
-            Chat Bot.AI 
+            BoB 
           </Typography>
         </Toolbar>
       </AppBar>
