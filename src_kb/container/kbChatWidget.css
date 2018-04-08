@@ -1,0 +1,12 @@
+.kbbotContainer{
+    width: 50%;
+    margin: auto;
+    height: 100%;
+    max-height: 400px;
+    min-height: 400px;
+    border-left: 1px solid #4080ff;
+    border-top-left-radius: 16px;
+    border-right: 1px solid #4080ff;
+    border-top-right-radius: 16px;
+    border-bottom: 1px solid #4080ff;
+}

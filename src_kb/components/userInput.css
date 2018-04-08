@@ -1,5 +1,5 @@
 .widUserInput{
-    width: 90%;
+    width: 99%;
     outline-style: none;
     -webkit-box-shadow: none;
     box-shadow: none;
@@ -12,24 +12,8 @@
     box-sizing: content-box;
     background: none;
     -webkit-tap-highlight-color: transparent;
-    display: inline-block;
-    /* border-top: 1px solid #a3a3a3; */
-    background-color: #f6f7f9;
-    font-size: 14px;
-    font-family: cursive;
-    border-right: 1px solid #a3a3a3;
-}
-
-.inputContainer{
-    text-align: left ;
+    display: block;
+    font-size: medium;
     border-top: 1px solid #a3a3a3;
-}
-
-.attachment{
-    padding-left: 2.5%;
-    cursor: pointer
-}
-
-.uploadExcel{
-    display: none
+    background-color: #f6f7f9;
 }

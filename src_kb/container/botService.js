@@ -30,8 +30,7 @@ export async function sendRequestToBotServer(text,context) {
     if (context) {
       requestObject.context = context;
     }
-    let dataFromBot = await axios.post('http://18.233.181.1', requestObject);
+    let dataFromBot = await axios.post('http://localhost:4500/api/conversation', requestObject);
     setResponse(dataFromBot.data);
-    
-    return dataFromBot.data.output.text[0];
+    return dataFromBot;
 }

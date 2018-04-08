@@ -1,0 +1,11 @@
+.widHeader{
+    background-color: #4080ff;
+    height: 60px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+}
+
+.widHeaderText{
+    padding-top: 7%;
+}

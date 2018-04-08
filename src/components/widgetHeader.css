@@ -1,12 +1,54 @@
 .widHeader{
     background-color: #4080ff;
-    height: 60px;
+    height: 45px;
     border-top-right-radius: 15px;
     border-top-left-radius: 15px;
     color: white;
+    text-align: left;
+    padding-left: 8%;
+    padding-top: 3%;
+    -moz-box-shadow:0 0 8px 0 black;
+-webkit-box-shadow:0 0 8px 0 black;
+box-shadow:0 0 4px 0 black;
+}
+
+.widHeaderNew{
+    background-color: orangered;
+    height: 45px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    color: white;
+    text-align: left;
+    padding-left: 8%;
+    padding-top: 3%;
+    -moz-box-shadow:0 0 8px 0 black;
+-webkit-box-shadow:0 0 8px 0 black;
+box-shadow:0 0 4px 0 black;
 }
 
 .widHeaderText{
-    padding-top: 3%;
+    
     font-weight: bold;
+}
+/* .botImage{
+    margin-right: 2%;
+    background: white;
+    border-radius: 50%;
+} */
+
+.status{
+    font-size: x-small;
+    font-weight: normal
+}
+
+.windowSize{
+    float: right;
+    padding-right: 8%;
+    font-size: 20px;
+    cursor: pointer;
+    padding-top:1.3%;
+}
+
+.headerName{
+    line-height: 2;
 }

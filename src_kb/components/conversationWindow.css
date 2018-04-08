@@ -1,0 +1,7 @@
+.widConvWindowContainer{
+    background-color: aliceblue;
+    /* height: 100%; */
+    overflow-y: scroll;
+    max-height: 400px;
+    min-height: 305px;
+}
