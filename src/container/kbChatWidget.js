@@ -12,18 +12,20 @@ class KbChatWidget extends Component {
         this.state = {
             mock: [],
             expanded:false,
-            newMessage:true
+            newMessage:true,
+            templateData:null
         }
         this.setToState = this.setToState.bind(this);
         this.changeExpandedState= this.changeExpandedState.bind(this);
         this.toggleNewMessage = this.toggleNewMessage.bind(this);
+        this.handleTemplateData= this.handleTemplateData.bind(this);
     }
     componentDidMount() {
         this.initBot();
     }
 
     changeExpandedState(){
-        console.log("came in");
+        //console.log("came in");
         this.setState({expanded:!this.state.expanded});
     }
 
@@ -60,6 +62,11 @@ class KbChatWidget extends Component {
         this.sendRequestToBot(data);
     }
 
+    handleTemplateData(data){
+        console.log(data);
+        this.setState({templateData:data});
+    }
+
 
     render() {
 
@@ -73,7 +80,7 @@ class KbChatWidget extends Component {
       }>
                 <div >
                     <ConversationWindow messages={this.state.mock} />
-                    <UserInput userInputValue={this.setToState} />
+                    <UserInput fileUploadData={this.handleTemplateData} userInputValue={this.setToState} />
                 </div>
                 </div>
             </div>

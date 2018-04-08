@@ -21,7 +21,7 @@ class ConversationWindow extends Component {
     render() {
         this.indents = [];
         for (var i = 0; i < this.props.messages.length; i++) {
-            console.log("messsaggeadasd", this.props.messages[i]);
+            //console.log("messsaggeadasd", this.props.messages[i]);
             if (this.props.messages[i].type == "bot") {
                 this.indents.push(<div className="leftUser" key={i}><span className="botIcon"></span><p>{this.props.messages[i].message}</p></div>);
             }
